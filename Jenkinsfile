@@ -1,13 +1,17 @@
 pipeline {
         agent any
+        environment {
+	DOCKERHUB_CREDENTIALS=credentials('DockerHub')
+	}
+
     
-        stages {
-            stage('pull') {
-                steps {
-                    docker.withRegistry('https://registry.hub.docker.com', 'DockerHub')
-                    sh 'docker pull srilekhas/php:latest'
-                }
-            }
+        // *stages {
+       //    stage('pull') {
+       //         steps {
+        //           docker.withRegistry('https://registry.hub.docker.com', 'DockerHub')
+         //          sh 'docker pull srilekhas/php:latest'
+           //     }
+           // } 
             
             stage('tag image') {
                 steps {
