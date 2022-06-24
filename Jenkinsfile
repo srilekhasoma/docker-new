@@ -4,7 +4,7 @@ pipeline {
         stages {
             stage('pull') {
                 steps {
-                    sh 'echo "$Lekha1998" | docker login --username srilekhas --password-stdin'
+                    sh 'docker login -u ${env.srilekhas} -p ${env.Lekha1998}'
                     sh 'docker pull srilekhas/php:latest'
                 }
             }
