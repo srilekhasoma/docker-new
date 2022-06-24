@@ -5,7 +5,7 @@ pipeline {
             stage('pull') {
                 steps {
                     sh 'docker login -u srilekhas -p Lekha1998'
-                    sh 'docker pull srilekhas/php:latest
+                    sh 'docker pull srilekhas/php:latest'
                 }
             }
             
