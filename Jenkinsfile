@@ -5,7 +5,7 @@ pipeline {
 	}
 
     
-        // *stages {
+        stages {
        //    stage('pull') {
        //         steps {
         //           docker.withRegistry('https://registry.hub.docker.com', 'DockerHub')
