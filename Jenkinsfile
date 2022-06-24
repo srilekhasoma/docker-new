@@ -4,7 +4,7 @@ pipeline {
         stages {
             stage('pull') {
                 steps {
-                    sh "docker login -u ${env.srilekhas} -p ${env.Lekha1998}"
+                    docker.withRegistry('https://registry.hub.docker.com', 'DockerHub')
                     sh 'docker pull srilekhas/php:latest'
                 }
             }
