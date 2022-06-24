@@ -2,8 +2,7 @@ node {
     checkout scm
     stage ('Pull image') {
     docker.withRegistry('https://registry.hub.docker.com', 'DockerHub') {
-        def customImage = docker.image('srilekhas/php:latest')
-        customImage.pull()
+    sh 'docker pull srilekhas/php:latest'
     }  
     }
 }
