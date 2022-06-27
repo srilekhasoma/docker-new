@@ -21,7 +21,7 @@ pipeline {
             }
             stage('push image') {
                 steps {
-		    DOCKERHUB_CREDENTIALS=credentials('dockerhub2')	
+		    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub2')	
                     // sh 'docker login -u 9492261286 -p Lekha1998'
                     sh 'docker push 9492261286/php-new:latest'
                 }
